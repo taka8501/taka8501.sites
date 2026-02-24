@@ -1,3 +1,4 @@
-#　taka8501.f5.si/home.html
+# taka8501のサイト
+<a href="https://taka8501.f5.si">
 上のリンクをクリックしてサイト本体へ
 　手間かけてごめんちゃい
