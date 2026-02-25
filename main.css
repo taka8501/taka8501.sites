@@ -33,3 +33,21 @@
 .navbar a:hover {
     background-color: #555;
 }
+/* ドロップダウンメニュー */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+    background-color: #222;
+    width: 200px;
+}
+
+.navbar li:hover .dropdown {
+    display: flex;
+}
+
+.dropdown li {
+    width
+```
