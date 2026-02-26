@@ -1,53 +1,78 @@
-/* メニューバー */
-.navbar {
-    background-color: #333;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    box-sizing: border-box;
-}
 
-.navbar ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
-.navbar li {
-    margin: 0;
-}
-
-.navbar a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 16px 20px;
-    transition: background-color 0.3s;
-}
-
-.navbar a:hover {
-    background-color: #555;
-}
 /* ドロップダウンメニュー */
-.dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    flex-direction: column;
-    background-color: #222;
-    width: 200px;
+.cp_navi06 {
+  background-color: #ffffff;
+  border: 1px solid #dedede;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+  color: #888888;
+  display: block;
+  margin: 1em auto;
+  overflow: hidden;
+  width: 100%;
 }
-
-.navbar li:hover .dropdown {
-    display: flex;
+.cp_navi06 ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
-
-.dropdown li {
-    width
-```
+.cp_navi06 ul li {
+  list-style-type: none;
+  transition: all 0.3s;
+}
+.cp_navi06 ul li a.caret {
+  display: flex;
+  align-items: center;
+}
+.cp_navi06 ul li a.caret::after {
+  content: '';
+  background: #aaaaaa;
+  width: 10px;
+  height: 5px;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  transition: color 0.1s linear;
+}
+.cp_navi06 ul li a {
+  color: #270303;
+  display: block;
+  line-height: 56px;
+  padding: 0 10px;
+  text-decoration: none;
+}
+.cp_navi06 ul li:hover {
+  background-color: rgb(177, 155, 155);
+}
+.cp_navi06 ul li:hover a {
+  color: #ffffff;
+}
+.cp_navi06 ul li:hover a.caret::after {
+  background: #ffffff;
+}
+/*下層に隠れたメニューの動き*/
+.cp_navi06 ul li ul {
+  background-color: rgb(177, 155, 155);
+  border-top: 0;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+  display: none;
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+  width: 165px;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.cp_navi06 ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+.cp_navi06 ul li ul li {
+  border-radius: 0 0 4px 4px;
+}
+.cp_navi06 ul li ul li a {
+  color: #ffffff;
+}
+.cp_navi06 ul li ul li:hover a {
+  background-color: rgba( 255, 255, 255, 0.1);
+}
